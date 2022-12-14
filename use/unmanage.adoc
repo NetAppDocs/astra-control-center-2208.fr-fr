@@ -31,6 +31,7 @@ Arrêtez de gérer les applications que vous ne souhaitez plus sauvegarder, cré
 . Confirmez que vous souhaitez annuler la gestion des applications, puis sélectionnez *Oui, annuler la gestion de l'application*.
 
 
+.Résultat
 Astra Control Center cesse de gérer l'application.
 
 
@@ -53,6 +54,7 @@ NOTE: Avant d'annuler la gestion du cluster, vous devez annuler la gestion des a
 . Confirmez que vous souhaitez annuler la gestion du cluster, puis sélectionnez *Oui, Unmanage cluster*.
 
 
+.Résultat
 L'état du cluster passe à *Suppression* et le cluster sera supprimé de la page *clusters* et n'est plus géré par Astra Control Center.
 
 

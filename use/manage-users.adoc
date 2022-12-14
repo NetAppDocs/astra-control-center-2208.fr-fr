@@ -143,6 +143,7 @@ S'il n'y a pas de contraintes, vous pouvez ajouter une contrainte. Pour plus d'i
 . Sélectionnez *confirmer*.
 
 
+.Résultat
 Astra Control Center met à jour les autorisations de l'utilisateur en fonction du nouveau rôle que vous avez sélectionné.
 
 
@@ -158,4 +159,5 @@ Les utilisateurs disposant du rôle propriétaire ou administrateur peuvent à t
 . Lorsque vous y êtes invité, confirmez la suppression en saisissant le mot "supprimer", puis sélectionnez *Oui, Supprimer l'utilisateur*.
 
 
+.Résultat
 Astra Control Center supprime l'utilisateur du compte.

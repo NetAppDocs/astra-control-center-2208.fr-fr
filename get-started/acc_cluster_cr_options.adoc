@@ -41,13 +41,13 @@ Vous pouvez utiliser les options CR de cluster Astra Control Center suivantes po
 | Volume ReclaimPolicy | Non défini | Facultatif | Fidélisation | Règle de récupération à définir pour les volumes persistants. 
 
 
-| AstressourcesScaler | chaîne | Obligatoire | Valeur par défaut | Options d'évolutivité pour les limites de ressources AstrakControlCenter. Voir  combinations and incompatibilities,la définition de complexités pour comprendre comment ces paramètres affectent les autres paramètres. 
+| AstressourcesScaler | chaîne | Obligatoire | Valeur par défaut | Options d'évolutivité pour les limites de ressources AstrakControlCenter. Voir <<Combinaisons de configuration et incompatibilités,la définition de complexités>> pour comprendre comment ces paramètres affectent les autres paramètres. 
 
 
 | AstraKubeConfigSecret | chaîne | Obligatoire | acc-kubeconfig-cred | Si cette valeur est présente et qu'un secret existe, l'opérateur tente d'ajouter ce KubeConfig pour devenir le premier cluster géré. 
 
 
-| Type d'esseType | chaîne | Facultatif | Générique (il s'agit de la valeur par défaut) | Le type de centre de contrôle Astra d'entrée doit être configuré pour. Les valeurs valides sont `Generic` et `AccTraefik`. Voir  combinations and incompatibilities,la définition de complexités pour comprendre comment ces paramètres affectent les autres paramètres. 
+| Type d'esseType | chaîne | Facultatif | Générique (il s'agit de la valeur par défaut) | Le type de centre de contrôle Astra d'entrée doit être configuré pour. Les valeurs valides sont `Generic` et `AccTraefik`. Voir <<Combinaisons de configuration et incompatibilités,la définition de complexités>> pour comprendre comment ces paramètres affectent les autres paramètres. 
 
 
 | Déployer | Booléen | Facultatif | vrai (il s'agit de la valeur par défaut) | Option permettant à un utilisateur de désactiver le déploiement d'Astra Plugin pour l'opérateur VMware vSphere. 
@@ -83,7 +83,7 @@ Vous pouvez utiliser les options CR de cluster Astra Control Center suivantes po
 | crds.shouldUpgrade | Booléen | Facultatif | Non défini | Détermine si les CRD doivent être mis à niveau lorsque le Centre de contrôle Astra est mis à niveau. 
 
 
-| mtls |  |  |  | Options pour la mise en œuvre de l'entretien du MTLS dans le groupe d'instruments. Voir  combinations and incompatibilities,la définition de complexités pour comprendre comment ces paramètres affectent les autres paramètres 
+| mtls |  |  |  | Options pour la mise en œuvre de l'entretien du MTLS dans le groupe d'instruments. Voir <<Combinaisons de configuration et incompatibilités,la définition de complexités>> pour comprendre comment ces paramètres affectent les autres paramètres 
 
 
 | mtls.activé | Booléen | Facultatif | vrai (cette valeur est la valeur par défaut) | Par défaut, Astra Control Center utilise MTLS pour la communication entre services. Cette option doit être désactivée lors de l'utilisation d'un maillage de service pour crypter à la place la communication service à service. 
@@ -115,6 +115,7 @@ Il existe deux valeurs valides pour ingressType :
 * AccTraefik
 
 
+.Générique (par défaut)
 Quand `ingressType` est défini sur `Generic`, Astra Control n'installe aucune ressource d'entrée. L'hypothèse est que l'utilisateur dispose d'un moyen commun de sécuriser et de router le trafic via leur réseau vers des applications qui s'exécutent sur des clusters Kubernetes, et qu'il souhaite utiliser les mêmes mécanismes ici. Lorsque l'utilisateur crée une entrée pour acheminer le trafic vers Astra Control, l'entrée doit pointer vers le service de trafik interne sur le port 80. Voici un exemple de ressource d'entrée Nginx qui fonctionne avec le paramètre Generic ingressType.
 
 [listing]
@@ -145,6 +146,7 @@ spec:
 
 WARNING: Lorsque MTLS est désactivé à l'aide du paramètre mtls.enabled du CR, vous devez utiliser `ingressType: Generic`.
 
+.AccTraefik
 Quand `ingressType` est défini sur `AccTraefik`, Astra Control Center déploie sa passerelle Traefik en tant que service de type Kubernetes LoadBalancer. Les utilisateurs doivent fournir un équilibreur de charge externe (tel que MetalLB) pour qu'Astra Control Center puisse obtenir une adresse IP externe.
 
 

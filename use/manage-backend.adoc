@@ -18,13 +18,13 @@ Pour obtenir des instructions sur la gestion des systèmes back-end avec l'API A
 Vous pouvez effectuer les tâches suivantes liées à la gestion d'un système back-end :
 
 * link:../get-started/setup_overview.html#add-a-storage-backend["Ajout d'un système back-end"]
-*  storage backend details
-*  a storage backend
-*  an Astra Data Store storage backend license
-*  an Astra Data Store storage backend
-*  a storage backend
-*  nodes to a storage backend cluster
-*  nodes from a storage backend cluster
+* <<Afficher les détails du système back-end>>
+* <<Annuler la gestion d'un système back-end>>
+* <<Mettre à jour une licence backend de stockage de magasin de données Astra>>
+* <<Mettez à niveau le système back-end de stockage de magasin de données Astra>>
+* <<Retirer un système back-end>>
+* <<Ajout de nœuds à un cluster back-end de stockage>>
+* <<Retirer des nœuds d'un cluster back-end de stockage>>
 
 
 
@@ -108,7 +108,7 @@ Vous pouvez supprimer un système back-end de stockage qui n'est plus utilisé. 
 
 TIP: Si vous supprimez un système back-end de magasin de données Astra, il ne doit pas avoir été créé par vCenter.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Assurez-vous que le système de stockage back-end n'est pas géré.
 * Assurez-vous que le système back-end ne contient aucun volume associé au cluster de magasin de données Astra.
 
@@ -140,7 +140,7 @@ TIP: Si vous supprimez un système back-end de magasin de données Astra, il ne 
 
 Vous pouvez mettre à jour la licence d'un système back-end de stockage en magasin de données Astra afin de prendre en charge un déploiement plus important ou des fonctionnalités améliorées.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Un système back-end de stockage de magasin de données Astra déployé et géré
 * Fichier de licence Astra Data Store (contactez votre ingénieur commercial NetApp pour acheter une licence Astra Data Store)
 
@@ -180,7 +180,7 @@ Sélectionnez une licence dans la liste.
 
 Vous pouvez mettre à niveau votre magasin de données Astra depuis le centre de contrôle Astra. Pour ce faire, vous devez d'abord télécharger un forfait de mise à niveau. Astra Control Center utilisera ce kit de mise à niveau pour mettre à niveau Astra Data Store.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Système back-end géré de stockage de magasin de données Astra
 * Un kit de mise à niveau Astra Data Store chargé (voir link:manage-packages-acc.html["Gérer les packs logiciels"])
 
@@ -197,6 +197,7 @@ Si vous disposez de plusieurs packages de mise à niveau dans votre référentie
 . Sélectionnez *Démarrer la mise à niveau*.
 
 
+.Résultat
 La page *Backends* affiche l'état *Upgrade* dans la colonne *Status* jusqu'à la fin de la mise à niveau.
 
 
@@ -205,7 +206,7 @@ La page *Backends* affiche l'état *Upgrade* dans la colonne *Status* jusqu'à l
 
 Vous pouvez ajouter des nœuds à un cluster Astra Data Store, jusqu'au nombre de nœuds pris en charge par le type de licence installé pour Astra Data Store.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Système back-end de stockage de magasin de données Astra déployé et sous licence
 * Vous avez ajouté le logiciel Astra Data Store dans Astra Control Center
 * Un ou plusieurs nœuds à ajouter au cluster

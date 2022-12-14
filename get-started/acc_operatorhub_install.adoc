@@ -15,7 +15,7 @@ Si vous utilisez Red Hat OpenShift, vous pouvez installer Astra Control Center �
 
 Une fois cette procédure terminée, vous devez revenir à la procédure d'installation pour terminer le link:../get-started/install_acc.html#verify-system-status["les étapes restantes"] pour vérifier que l'installation a réussi et ouvrir une session.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * link:requirements.html["Avant de commencer l'installation, préparez votre environnement pour le déploiement d'Astra Control Center"].
 * Depuis votre cluster OpenShift, assurez-vous que tous les opérateurs de clusters sont en état sain (`available` est `true`) :
 +
@@ -35,12 +35,12 @@ oc get apiservices
 
 
 .Étapes
-*  and unpack the Astra Control Center bundle
-*  the NetApp Astra kubectl plugin
-*  the images to your local registry
-*  the operator install page
-*  the operator
-*  Astra Control Center
+* <<Téléchargez et déballez le pack Astra Control Center>>
+* <<Installez le plug-in NetApp Astra kubectl>>
+* <<Ajoutez les images à votre registre local>>
+* <<Recherchez la page d'installation de l'opérateur>>
+* <<Poser l'opérateur>>
+* <<Poser le centre de contrôle Astra>>
 
 
 
@@ -69,6 +69,7 @@ tar -vxzf astra-control-center-[version].tar.gz
 
 NetApp Astra `kubectl` Le plug-in de ligne de commande permet de gagner du temps lors de l'exécution des tâches courantes associées au déploiement et à la mise à niveau d'Astra Control Center.
 
+.Ce dont vous avez besoin
 NetApp fournit des binaires pour différents systèmes d'exploitation et architectures CPU. Avant d'effectuer cette tâche, vous devez savoir quelle unité centrale et quel système d'exploitation vous possédez. Sur les systèmes d'exploitation Linux et Mac, vous pouvez utiliser `uname -a` commande permettant de collecter ces informations.
 
 .Étapes

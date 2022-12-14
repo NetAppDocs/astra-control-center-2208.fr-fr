@@ -13,7 +13,7 @@ summary: Vous pouvez télécharger et installer des paquets sur Astra Control Ce
 
 NetApp propose des fonctionnalités supplémentaires pour Astra Control Center avec des packages logiciels que vous pouvez télécharger sur le site de support NetApp. Après avoir connecté Docker et les référentiels d'artéfacts, vous pouvez télécharger et importer des packages pour ajouter cette fonctionnalité à Astra Control Center. Vous pouvez utiliser l'interface CLI ou l'interface utilisateur Web Astra Control Center pour gérer les progiciels.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Cluster Kubernetes avec Astra Control Center installé
 * Un référentiel d'images Docker connecté pour conserver les images du progiciel. Pour plus d'informations, voir link:manage-connections.html["Gérer les connexions au référentiel"].
 * Un référentiel d'artéfacts connecté pour contenir les fichiers binaires et les artefacts du logiciel. Pour plus d'informations, voir link:manage-connections.html["Gérer les connexions au référentiel"].
@@ -71,6 +71,7 @@ Vous pouvez utiliser l'interface utilisateur Web Astra Control Center pour ajout
 . Sélectionnez *Ajouter*.
 
 
+.Résultat
 Si le fichier de bundle est valide et que les images de package et les artefacts se trouvent dans vos référentiels connectés, le package est ajouté à Astra Control Center. Lorsque l'état de la colonne *Status* devient *Available*, vous pouvez utiliser le package. Vous pouvez positionner le curseur de la souris sur l'état d'un pack pour obtenir plus d'informations.
 
 
@@ -104,6 +105,7 @@ kubectl astra packages import -m BUNDLE_FILE -u SERVER -a ACCOUNT_ID -k TOKEN
 
 
 
+.Résultat
 Si le fichier de bundle est valide et que les images de package et les artefacts se trouvent dans vos référentiels connectés, le package est ajouté à Astra Control Center.
 
 
@@ -125,6 +127,7 @@ Vous pouvez voir la liste des packages installés et leur état sur cette page.
 . Sélectionnez *Supprimer*.
 
 
+.Résultat
 Le package est supprimé d'Astra Control Center, mais les images et les artefacts du package restent dans vos référentiels.
 
 [discrete]

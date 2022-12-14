@@ -13,7 +13,7 @@ summary: 'Vous pouvez télécharger et vérifier un certificat TLS signé par un
 
 Vous pouvez supprimer le certificat TLS auto-signé existant et le remplacer par un certificat TLS signé par une autorité de certification (AC).
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Cluster Kubernetes avec Astra Control Center installé
 * Accès administratif à un shell de commande sur le cluster à exécuter `kubectl` commandes
 * Clé privée et fichiers de certificat de l'autorité de certification

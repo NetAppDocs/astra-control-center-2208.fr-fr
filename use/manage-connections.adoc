@@ -13,7 +13,7 @@ summary: Vous pouvez télécharger et installer des paquets sur Astra Control Ce
 
 Vous pouvez connecter des référentiels à Astra Control afin de les utiliser comme référence pour les images d'installation de progiciels et les artefacts. Lorsque vous importez des logiciels, Astra Control fait référence aux images d'installation dans le référentiel d'images, les binaires et autres artefacts dans le référentiel d'artefacts.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Cluster Kubernetes avec Astra Control Center installé
 * Un référentiel Docker en cours d'exécution auquel vous pouvez accéder
 * Un référentiel d'artéfacts en cours d'exécution (comme Artifactory) auquel vous pouvez accéder
@@ -35,6 +35,7 @@ Vous pouvez connecter un référentiel d'images Docker pour contenir des images 
 . Sélectionnez *connexion*.
 
 
+.Résultat
 Le référentiel est connecté. Dans la section *Docker image Repository*, le référentiel doit afficher l'état connecté.
 
 
@@ -51,6 +52,7 @@ Vous pouvez supprimer la connexion à un référentiel d'images Docker s'il n'es
 . Sélectionnez *Oui, déconnectez le référentiel d'images Docker*.
 
 
+.Résultat
 Le référentiel est déconnecté. Dans la section *Docker image Repository*, le référentiel doit afficher un état déconnecté.
 
 
@@ -69,6 +71,7 @@ Vous pouvez connecter un référentiel d'artéfacts à des artefacts hôtes tels
 . Sélectionnez *connexion*.
 
 
+.Résultat
 Le référentiel est connecté. Dans la section *artefact Repository*, le référentiel doit afficher un état connecté.
 
 
@@ -85,6 +88,7 @@ Vous pouvez supprimer la connexion à un référentiel d'artefacts s'il n'est pl
 . Sélectionnez *Oui, déconnectez le référentiel d'artefacts*.
 
 
+.Résultat
 Le référentiel est déconnecté. Dans la section *artefact Repository*, le référentiel doit afficher un état connecté.
 
 [discrete]

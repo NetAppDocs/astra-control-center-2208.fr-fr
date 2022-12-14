@@ -13,16 +13,16 @@ summary: Commencez à utiliser Astra Control Center en vérifiant la prise en ch
 
 Commencez par vérifier que votre environnement opérationnel, vos clusters d'applications, vos applications, vos licences et votre navigateur Web sont prêts.
 
-*  environment requirements
-*  storage backends
-*  cluster requirements
-*  management requirements
-*  prerequisites
-*  to the internet
-* 
-*  for on-premises Kubernetes clusters
-*  requirements
-*  web browsers
+* <<De l'environnement opérationnel>>
+* <<Systèmes back-end de stockage pris en charge>>
+* <<Configuration requise en cluster des applications>>
+* <<De gestion des applications>>
+* <<Conditions préalables à la réplication>>
+* <<Accès à Internet>>
+* <<Licence>>
+* <<Entrée pour les clusters Kubernetes sur site>>
+* <<Configuration réseau requise>>
+* <<Navigateurs Web pris en charge>>
 
 
 

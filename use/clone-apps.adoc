@@ -16,6 +16,7 @@ Clonez une application existante pour créer une application dupliquée sur le m
 
 Le clonage peut être utile pour déplacer des applications et du stockage d'un cluster Kubernetes vers un autre. Par exemple, il peut être intéressant de déplacer les workloads dans un pipeline ci/CD et entre les espaces de noms Kubernetes. Vous pouvez utiliser l'interface utilisateur Astra ou https://docs.netapp.com/us-en/astra-automation/index.html["API de contrôle Astra"^] clonage et migration des applications.
 
+.Ce dont vous avez besoin
 Pour cloner les applications vers un autre cluster, il vous faut un compartiment par défaut. Lorsque vous ajoutez votre premier compartiment, il devient le compartiment par défaut.
 
 .Description de la tâche
@@ -58,6 +59,7 @@ Pour cloner les applications vers un autre cluster, il vous faut un compartiment
 . *Résumé du clone* : consultez les détails sur le clone et sélectionnez *Clone*.
 
 
+.Résultat
 Astra Control Center clone cette application en fonction des informations que vous avez fournies. L'opération de clonage est réussie lorsque le nouveau clone d'application est dans `Available` Indiquez la page *applications*.
 
 

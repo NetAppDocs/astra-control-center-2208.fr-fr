@@ -28,6 +28,7 @@ Des détails tels que la capacité et le débit n'apparaissent pas dans l'interf
 Si vous avez ajouté un cluster contenant Astra Data Store à un cluster Astra Control Center, l'application système astrads est gérée par défaut comme une application masquée. Pour annuler la gestion du cluster, vous devez d'abord annuler la gestion de l'application système astrads. Vous ne pouvez pas annuler la gestion de ce type d'application à l'aide de l'interface utilisateur du centre de contrôle Astra. Utilisez plutôt une demande d'API de contrôle Astra pour supprimer manuellement l'application :
 
 .Détails
+[%collapsible]
 ====
 .Étapes
 . Obtenez l'ID du cluster géré à l'aide de cette API :

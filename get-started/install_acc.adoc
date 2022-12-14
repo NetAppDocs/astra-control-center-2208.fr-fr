@@ -15,7 +15,7 @@ Pour installer le centre de contrôle Astra, téléchargez le bundle d'installat
 
 Pour les environnements Red Hat OpenShift, vous pouvez utiliser un link:../get-started/acc_operatorhub_install.html["autre procédure"] Pour installer Astra Control Center à l'aide d'OpenShift OperatorHub.
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * link:requirements.html["Avant de commencer l'installation, préparez votre environnement pour le déploiement d'Astra Control Center"].
 * Si vous avez configuré ou que vous souhaitez configurer des stratégies de sécurité de pod dans votre environnement, familiarisez-vous avec les stratégies de sécurité de pod et leur incidence sur l'installation d'Astra Control Center. Voir link:understand-psp-restrictions.html["Comprendre les restrictions de la stratégie de sécurité du pod"].
 * S'assurer que tous les opérateurs du groupe d'instruments sont en état de fonctionnement et disponibles.
@@ -34,6 +34,7 @@ kubectl get apiservices
 * Si un cert-Manager existe déjà dans le cluster, vous devez en effectuer certaines link:../get-started/cert-manager-prereqs.html["étapes préalables"] Pour qu'Astra Control Center n'installe pas son propre cert-Manager.
 
 
+.Description de la tâche
 La procédure d'installation d'Astra Control Center est la suivante :
 
 * Installe les composants Astra dans le `netapp-acc` (ou espace de nom personnalisé).
@@ -52,18 +53,19 @@ IMPORTANT: N'exécutez pas la commande suivante pendant l'intégralité du proce
 
 NOTE: Si vous utilisez le Podman de Red Hat au lieu de Docker Engine, vous pouvez utiliser les commandes Podman à la place des commandes Docker.
 
+.Étapes
 Pour installer le centre de contrôle Astra, procédez comme suit :
 
-*  and unpack the Astra Control Center bundle
-*  the NetApp Astra kubectl plugin
-*  the images to your local registry
-*  up namespace and secret for registries with auth requirements
-*  the Astra Control Center operator
-*  Astra Control Center
-*  Astra Control Center and operator installation
-*  system status
-*  up ingress for load balancing
-*  in to the Astra Control Center UI
+* <<Téléchargez et déballez le pack Astra Control Center>>
+* <<Installez le plug-in NetApp Astra kubectl>>
+* <<Ajoutez les images à votre registre local>>
+* <<Configurez l'espace de noms et le secret pour les registres avec les exigences d'authentification>>
+* <<Poser le conducteur du centre de commande Astra>>
+* <<Configurer le centre de contrôle Astra>>
+* <<Installation complète du centre de contrôle Astra et du conducteur>>
+* <<Vérifiez l'état du système>>
+* <<Configurer l'entrée pour l'équilibrage de charge>>
+* <<Connectez-vous à l'interface utilisateur du centre de contrôle Astra>>
 
 
 
@@ -92,6 +94,7 @@ tar -vxzf astra-control-center-[version].tar.gz
 
 NetApp Astra `kubectl` Le plug-in de ligne de commande permet de gagner du temps lors de l'exécution des tâches courantes associées au déploiement et à la mise à niveau d'Astra Control Center.
 
+.Ce dont vous avez besoin
 NetApp fournit des binaires pour différents systèmes d'exploitation et architectures CPU. Avant d'effectuer cette tâche, vous devez savoir quelle unité centrale et quel système d'exploitation vous possédez. Sur les systèmes d'exploitation Linux et Mac, vous pouvez utiliser `uname -a` commande permettant de collecter ces informations.
 
 .Étapes
@@ -296,8 +299,8 @@ NOTE: Un échantillon annoté YAML suit ces étapes.
 imagePullSecrets:
 - name: <astra-registry-cred>
 ----
-.. Changer `[your_registry_path]` pour le `kube-rbac-proxy` image dans le chemin du registre où vous avez poussé les images dans un ,étape précédente.
-.. Changer `[your_registry_path]` pour le `acc-operator-controller-manager` image dans le chemin du registre où vous avez poussé les images dans un ,étape précédente.
+.. Changer `[your_registry_path]` pour le `kube-rbac-proxy` image dans le chemin du registre où vous avez poussé les images dans un <<substep_image_local_registry_push,étape précédente>>.
+.. Changer `[your_registry_path]` pour le `acc-operator-controller-manager` image dans le chemin du registre où vous avez poussé les images dans un <<substep_image_local_registry_push,étape précédente>>.
 .. (Pour les installations utilisant l'aperçu d'Astra Data Store) Découvrez ce problème connu concernant https://docs.netapp.com/us-en/astra-data-store-2112/release-notes/known-issues.html#mongodb-deployment-with-default-liveness-probe-value-fails-with-pods-in-crash-loop["Les spécialistes en provisionnement de classe de stockage et les changements supplémentaires que vous devrez apporter au YAML"^].
 +
 [listing, subs="+quotes"]
@@ -399,8 +402,8 @@ IMPORTANT: Si vous utilisez un registre qui ne requiert pas d'autorisation, vous
 +
 .. Changer `[your_registry_path]` vers le chemin du registre où vous avez poussé les images à l'étape précédente.
 .. Modifiez le `accountName` chaîne du nom que vous souhaitez associer au compte.
-.. Modifiez le `astraAddress` Chaîne du FQDN que vous souhaitez utiliser dans votre navigateur pour accéder à Astra. Ne pas utiliser `http://` ou `https://` dans l'adresse. Copier ce FQDN pour l'utiliser dans un  in to the Astra Control Center UI,plus tard.
-.. Modifiez le `email` chaîne à l'adresse d'administrateur initiale par défaut. Copiez cette adresse e-mail pour l'utiliser dans un  in to the Astra Control Center UI,plus tard.
+.. Modifiez le `astraAddress` Chaîne du FQDN que vous souhaitez utiliser dans votre navigateur pour accéder à Astra. Ne pas utiliser `http://` ou `https://` dans l'adresse. Copier ce FQDN pour l'utiliser dans un <<Connectez-vous à l'interface utilisateur du centre de contrôle Astra,plus tard>>.
+.. Modifiez le `email` chaîne à l'adresse d'administrateur initiale par défaut. Copiez cette adresse e-mail pour l'utiliser dans un <<Connectez-vous à l'interface utilisateur du centre de contrôle Astra,plus tard>>.
 .. Changer `enrolled` Pour AutoSupport à `false` pour les sites sans connexion internet ou sans conservation `true` pour les sites connectés.
 .. Si vous utilisez un cert-Manager externe, ajoutez les lignes suivantes à `spec`:
 +
@@ -412,7 +415,7 @@ spec:
 ----
 .. (Facultatif) Ajouter un prénom `firstName` et nom `lastName` de l'utilisateur associé au compte. Vous pouvez effectuer cette étape maintenant ou plus tard dans l'interface utilisateur.
 .. (Facultatif) modifiez le `storageClass` Valeur ajoutée pour une autre ressource de stockage Trident si votre installation l'exige.
-.. (Facultatif) si vous souhaitez que le cluster soit géré automatiquement par Astra Control Center après l'installation et que vous l'ayez déjà fait ,créé le secret contenant le kubecconfig pour ce cluster, Indiquez le nom du secret en ajoutant un nouveau champ à ce fichier YAML appelé `astraKubeConfigSecret: "acc-kubeconfig-cred or custom secret name"`
+.. (Facultatif) si vous souhaitez que le cluster soit géré automatiquement par Astra Control Center après l'installation et que vous l'ayez déjà fait <<substep_kubeconfig_secret,créé le secret contenant le kubecconfig pour ce cluster>>, Indiquez le nom du secret en ajoutant un nouveau champ à ce fichier YAML appelé `astraKubeConfigSecret: "acc-kubeconfig-cred or custom secret name"`
 .. Effectuez l'une des opérations suivantes :
 +
 *** *Autre contrôleur d'entrée (ingressType:Generic)*: Il s'agit de l'action par défaut avec Astra Control Center. Après le déploiement du centre de contrôle Astra, vous devrez configurer le contrôleur d'entrée pour exposer le centre de contrôle Astra à une URL.
@@ -511,6 +514,7 @@ Chaque pod doit avoir un statut de `Running`. Le déploiement des modules du sys
 
 +
 .Exemple de réponse
+[%collapsible]
 ====
 [listing, subs="+quotes"]
 ----
@@ -632,7 +636,7 @@ Les étapes diffèrent en fonction du type de contrôleur d'entrée utilisé :
 * Contrôleur d'entrée OpenShift
 
 
-.Ce dont vous avez besoin, 8217;ll
+.Ce dont vous avez besoin
 * Le requis https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/["contrôleur d'entrée"] doit déjà être déployé.
 * Le https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-class["classe d'entrée"] correspondant au contrôleur d'entrée doit déjà être créé.
 * Vous utilisez les versions de Kubernetes entre et, y compris v1.19 et v1.22.
@@ -849,13 +853,13 @@ oc create route edge --service=traefik
 Après avoir installé Astra Control Center, vous modifierez le mot de passe de l'administrateur par défaut et vous connecterez au tableau de bord de l'interface utilisateur de Astra Control Center.
 
 .Étapes
-. Dans un navigateur, entrez le FQDN que vous avez utilisé dans le `astraAddress` dans le  `astra_control_center_min.yaml` CR quand  Astra Control Center,Vous avez installé Astra Control Center.
+. Dans un navigateur, entrez le FQDN que vous avez utilisé dans le `astraAddress` dans le  `astra_control_center_min.yaml` CR quand <<Poser le centre de contrôle Astra,Vous avez installé Astra Control Center>>.
 . Acceptez les certificats auto-signés lorsque vous y êtes invité.
 +
 
 NOTE: Vous pouvez créer un certificat personnalisé après la connexion.
 
-. Dans la page de connexion à Astra Control Center, entrez la valeur que vous avez utilisée `email` dans `astra_control_center_min.yaml` CR quand  Astra Control Center,Vous avez installé Astra Control Center, suivi du mot de passe à usage unique (`ACC-[UUID]`).
+. Dans la page de connexion à Astra Control Center, entrez la valeur que vous avez utilisée `email` dans `astra_control_center_min.yaml` CR quand <<Poser le centre de contrôle Astra,Vous avez installé Astra Control Center>>, suivi du mot de passe à usage unique (`ACC-[UUID]`).
 +
 
 NOTE: Si vous saisissez trois fois un mot de passe incorrect, le compte admin est verrouillé pendant 15 minutes.

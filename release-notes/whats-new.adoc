@@ -47,6 +47,7 @@ NOTE: Les crochets d'exécution par défaut avant ou après snapshot de NetApp o
 == 26 avril 2022 (22.04.0)
 
 .Détails
+[%collapsible]
 ====
 .Nouvelles fonctionnalités et prises en charge
 * https://docs.netapp.com/us-en/astra-control-center-2204/get-started/setup_overview.html#add-a-storage-backend["Déploiement d'un magasin de données Astra Control Center"]
@@ -69,6 +70,7 @@ NOTE: Les crochets d'exécution par défaut avant ou après snapshot de NetApp o
 == 14 décembre 2021 (21.12)
 
 .Détails
+[%collapsible]
 ====
 .Nouvelles fonctionnalités et prises en charge
 * https://docs.netapp.com/us-en/astra-control-center-2112/use/restore-apps.html["Restauration des applications"^]
@@ -96,6 +98,7 @@ NOTE: Les crochets d'exécution par défaut avant ou après snapshot de NetApp o
 == 5 août 2021 (21.08)
 
 .Détails
+[%collapsible]
 ====
 Lancement initial du centre de contrôle Astra.
 

@@ -15,7 +15,7 @@ Assurez-vous que les conditions préalables sont remplies avant d'ajouter un clu
 
 
 
-== Ce dont vous aurez besoin avant d'ajouter un cluster
+== Ce dont vous avez besoin avant d'ajouter un cluster
 
 Assurez-vous que votre cluster répond aux exigences décrites dans link:requirements.html#application-cluster-requirements["Configuration requise en cluster des applications"].
 
