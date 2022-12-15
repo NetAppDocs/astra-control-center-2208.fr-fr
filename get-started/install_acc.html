@@ -1402,7 +1402,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-22 16:12:17 +0000">11/22/2022</time>
+    <time datetime="2022-12-14 18:33:02 +0000">12/14/2022</time>
     
   
 
@@ -1421,7 +1421,7 @@
 <p>Pour les environnements Red Hat OpenShift, vous pouvez utiliser un <a href="../get-started/acc_operatorhub_install.html">"autre procédure"</a> Pour installer Astra Control Center à l&#8217;aide d&#8217;OpenShift OperatorHub.</p>
 </div>
 <div class="ulist">
-<div class="title">Ce dont vous avez besoin, 8217;ll</div>
+<div class="title">Ce dont vous avez besoin</div>
 <ul>
 <li>
 <p><a href="requirements.html">"Avant de commencer l&#8217;installation, préparez votre environnement pour le déploiement d&#8217;Astra Control Center"</a>.</p>
@@ -1454,6 +1454,7 @@
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>La procédure d&#8217;installation d&#8217;Astra Control Center est la suivante :</p>
 </div>
 <div class="ulist">
@@ -1512,39 +1513,40 @@ Si vous utilisez le Podman de Red Hat au lieu de Docker Engine, vous pouvez util
 </table>
 </div>
 <div class="paragraph">
+<div class="title">Étapes</div>
 <p>Pour installer le centre de contrôle Astra, procédez comme suit :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>and unpack the Astra Control Center bundle</p>
+<p><a href="#téléchargez-et-déballez-le-pack-astra-control-center">Téléchargez et déballez le pack Astra Control Center</a></p>
 </li>
 <li>
-<p>the NetApp Astra kubectl plugin</p>
+<p><a href="#installez-le-plug-in-netapp-astra-kubectl">Installez le plug-in NetApp Astra kubectl</a></p>
 </li>
 <li>
-<p>the images to your local registry</p>
+<p><a href="#ajoutez-les-images-à-votre-registre-local">Ajoutez les images à votre registre local</a></p>
 </li>
 <li>
-<p>up namespace and secret for registries with auth requirements</p>
+<p><a href="Configurez l&.html#8217;espace de noms et le secret pour les registres avec les exigences d&#8217;authentification">Configurez l&.html</a></p>
 </li>
 <li>
-<p>the Astra Control Center operator</p>
+<p><a href="#poser-le-conducteur-du-centre-de-commande-astra">Poser le conducteur du centre de commande Astra</a></p>
 </li>
 <li>
-<p>Astra Control Center</p>
+<p><a href="#configurer-le-centre-de-contrôle-astra">Configurer le centre de contrôle Astra</a></p>
 </li>
 <li>
-<p>Astra Control Center and operator installation</p>
+<p><a href="#installation-complète-du-centre-de-contrôle-astra-et-du-conducteur">Installation complète du centre de contrôle Astra et du conducteur</a></p>
 </li>
 <li>
-<p>system status</p>
+<p><a href="Vérifiez l&.html#8217;état du système">Vérifiez l&.html</a></p>
 </li>
 <li>
-<p>up ingress for load balancing</p>
+<p><a href="Configurer l&.html#8217;entrée pour l&#8217;équilibrage de charge">Configurer l&.html</a></p>
 </li>
 <li>
-<p>in to the Astra Control Center UI</p>
+<p><a href="Connectez-vous à l&.html#8217;interface utilisateur du centre de contrôle Astra">Connectez-vous à l&.html</a></p>
 </li>
 </ul>
 </div>
@@ -1588,6 +1590,7 @@ Si vous utilisez le Podman de Red Hat au lieu de Docker Engine, vous pouvez util
 <p>NetApp Astra <code>kubectl</code> Le plug-in de ligne de commande permet de gagner du temps lors de l&#8217;exécution des tâches courantes associées au déploiement et à la mise à niveau d&#8217;Astra Control Center.</p>
 </div>
 <div class="paragraph">
+<div class="title">Ce dont vous avez besoin</div>
 <p>NetApp fournit des binaires pour différents systèmes d&#8217;exploitation et architectures CPU. Avant d&#8217;effectuer cette tâche, vous devez savoir quelle unité centrale et quel système d&#8217;exploitation vous possédez. Sur les systèmes d&#8217;exploitation Linux et Mac, vous pouvez utiliser <code>uname -a</code> commande permettant de collecter ces informations.</p>
 </div>
 <div class="olist arabic">
@@ -1885,10 +1888,10 @@ Un échantillon annoté YAML suit ces étapes.
 </div>
 </li>
 <li>
-<p>Changer <code>[your_registry_path]</code> pour le <code>kube-rbac-proxy</code> image dans le chemin du registre où vous avez poussé les images dans un ,étape précédente.</p>
+<p>Changer <code>[your_registry_path]</code> pour le <code>kube-rbac-proxy</code> image dans le chemin du registre où vous avez poussé les images dans un <a href="#substep_image_local_registry_push">étape précédente</a>.</p>
 </li>
 <li>
-<p>Changer <code>[your_registry_path]</code> pour le <code>acc-operator-controller-manager</code> image dans le chemin du registre où vous avez poussé les images dans un ,étape précédente.</p>
+<p>Changer <code>[your_registry_path]</code> pour le <code>acc-operator-controller-manager</code> image dans le chemin du registre où vous avez poussé les images dans un <a href="#substep_image_local_registry_push">étape précédente</a>.</p>
 </li>
 <li>
 <p>(Pour les installations utilisant l&#8217;aperçu d&#8217;Astra Data Store) Découvrez ce problème connu concernant <a href="https://docs.netapp.com/us-en/astra-data-store-2112/release-notes/known-issues.html#mongodb-deployment-with-default-liveness-probe-value-fails-with-pods-in-crash-loop" target="_blank" rel="noopener">"Les spécialistes en provisionnement de classe de stockage et les changements supplémentaires que vous devrez apporter au YAML"</a>.</p>
@@ -2024,10 +2027,10 @@ Si vous utilisez un registre qui ne requiert pas d&#8217;autorisation, vous deve
 <p>Modifiez le <code>accountName</code> chaîne du nom que vous souhaitez associer au compte.</p>
 </li>
 <li>
-<p>Modifiez le <code>astraAddress</code> Chaîne du FQDN que vous souhaitez utiliser dans votre navigateur pour accéder à Astra. Ne pas utiliser <code>http://</code> ou <code>https://</code> dans l&#8217;adresse. Copier ce FQDN pour l&#8217;utiliser dans un  in to the Astra Control Center UI,plus tard.</p>
+<p>Modifiez le <code>astraAddress</code> Chaîne du FQDN que vous souhaitez utiliser dans votre navigateur pour accéder à Astra. Ne pas utiliser <code>http://</code> ou <code>https://</code> dans l&#8217;adresse. Copier ce FQDN pour l&#8217;utiliser dans un <a href="Connectez-vous à l&.html#8217;interface utilisateur du centre de contrôle Astra">plus tard</a>.</p>
 </li>
 <li>
-<p>Modifiez le <code>email</code> chaîne à l&#8217;adresse d&#8217;administrateur initiale par défaut. Copiez cette adresse e-mail pour l&#8217;utiliser dans un  in to the Astra Control Center UI,plus tard.</p>
+<p>Modifiez le <code>email</code> chaîne à l&#8217;adresse d&#8217;administrateur initiale par défaut. Copiez cette adresse e-mail pour l&#8217;utiliser dans un <a href="Connectez-vous à l&.html#8217;interface utilisateur du centre de contrôle Astra">plus tard</a>.</p>
 </li>
 <li>
 <p>Changer <code>enrolled</code> Pour AutoSupport à <code>false</code> pour les sites sans connexion internet ou sans conservation <code>true</code> pour les sites connectés.</p>
@@ -2049,7 +2052,7 @@ Si vous utilisez un registre qui ne requiert pas d&#8217;autorisation, vous deve
 <p>(Facultatif) modifiez le <code>storageClass</code> Valeur ajoutée pour une autre ressource de stockage Trident si votre installation l&#8217;exige.</p>
 </li>
 <li>
-<p>(Facultatif) si vous souhaitez que le cluster soit géré automatiquement par Astra Control Center après l&#8217;installation et que vous l&#8217;ayez déjà fait ,créé le secret contenant le kubecconfig pour ce cluster, Indiquez le nom du secret en ajoutant un nouveau champ à ce fichier YAML appelé <code>astraKubeConfigSecret: "acc-kubeconfig-cred or custom secret name"</code></p>
+<p>(Facultatif) si vous souhaitez que le cluster soit géré automatiquement par Astra Control Center après l&#8217;installation et que vous l&#8217;ayez déjà fait <a href="#substep_kubeconfig_secret">créé le secret contenant le kubecconfig pour ce cluster</a>, Indiquez le nom du secret en ajoutant un nouveau champ à ce fichier YAML appelé <code>astraKubeConfigSecret: "acc-kubeconfig-cred or custom secret name"</code></p>
 </li>
 <li>
 <p>Effectuez l&#8217;une des opérations suivantes :</p>
@@ -2183,8 +2186,8 @@ Si vous préférez utiliser OpenShift, vous pouvez utiliser des commandes oc com
 <div class="paragraph">
 <p>Chaque pod doit avoir un statut de <code>Running</code>. Le déploiement des modules du système peut prendre plusieurs minutes.</p>
 </div>
-<div class="exampleblock">
-<div class="title">Exemple 1. Exemple de réponse</div>
+<details>
+<summary class="title">Exemple de réponse</summary>
 <div class="content">
 <div class="listingblock">
 <div class="content">
@@ -2258,7 +2261,7 @@ vault-controller-6b954f9b76-gz9nm        1/1    Running  0        11m</pre>
 </div>
 </div>
 </div>
-</div>
+</details>
 </li>
 <li>
 <p>(Facultatif) pour vous assurer que l&#8217;installation est terminée, vous pouvez regarder le <code>acc-operator</code> journaux utilisant la commande suivante.</p>
@@ -2351,7 +2354,7 @@ Si vous ne souhaitez pas configurer un contrôleur d&#8217;entrée, vous pouvez 
 </ul>
 </div>
 <div class="ulist">
-<div class="title">Ce dont vous avez besoin, 8217;ll</div>
+<div class="title">Ce dont vous avez besoin</div>
 <ul>
 <li>
 <p>Le requis <a href="https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/">"contrôleur d&#8217;entrée"</a> doit déjà être déployé.</p>
@@ -2627,7 +2630,7 @@ spec:
 <div class="title">Étapes</div>
 <ol class="arabic">
 <li>
-<p>Dans un navigateur, entrez le FQDN que vous avez utilisé dans le <code>astraAddress</code> dans le  <code>astra_control_center_min.yaml</code> CR quand  Astra Control Center,Vous avez installé Astra Control Center.</p>
+<p>Dans un navigateur, entrez le FQDN que vous avez utilisé dans le <code>astraAddress</code> dans le  <code>astra_control_center_min.yaml</code> CR quand <a href="#Poser le centre de contrôle Astra">Vous avez installé Astra Control Center</a>.</p>
 </li>
 <li>
 <p>Acceptez les certificats auto-signés lorsque vous y êtes invité.</p>
@@ -2645,7 +2648,7 @@ Vous pouvez créer un certificat personnalisé après la connexion.
 </div>
 </li>
 <li>
-<p>Dans la page de connexion à Astra Control Center, entrez la valeur que vous avez utilisée <code>email</code> dans <code>astra_control_center_min.yaml</code> CR quand  Astra Control Center,Vous avez installé Astra Control Center, suivi du mot de passe à usage unique (<code>ACC-[UUID]</code>).</p>
+<p>Dans la page de connexion à Astra Control Center, entrez la valeur que vous avez utilisée <code>email</code> dans <code>astra_control_center_min.yaml</code> CR quand <a href="#Poser le centre de contrôle Astra">Vous avez installé Astra Control Center</a>, suivi du mot de passe à usage unique (<code>ACC-[UUID]</code>).</p>
 <div class="admonitionblock note">
 <table>
 <tr>

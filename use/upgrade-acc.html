@@ -1404,7 +1404,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-22 16:12:17 +0000">11/22/2022</time>
+    <time datetime="2022-12-14 18:33:02 +0000">12/14/2022</time>
     
   
 
@@ -1420,7 +1420,7 @@
 <p>Pour mettre à niveau Astra Control Center, téléchargez le pack d&#8217;installation depuis le site de support NetApp et suivez ces instructions pour mettre à niveau les composants d&#8217;Astra Control Center dans votre environnement. Vous pouvez utiliser cette procédure pour mettre à niveau Astra Control Center dans des environnements connectés à Internet ou à air comprimé.</p>
 </div>
 <div class="ulist">
-<div class="title">Ce dont vous avez besoin, 8217;ll</div>
+<div class="title">Ce dont vous avez besoin</div>
 <ul>
 <li>
 <p><a href="../get-started/requirements.html">"Avant de commencer la mise à niveau, assurez-vous que votre environnement satisfait aux exigences minimales relatives au déploiement d&#8217;Astra Control Center"</a>.</p>
@@ -1447,33 +1447,34 @@
 </ul>
 </div>
 <div class="paragraph">
+<div class="title">Description de la tâche</div>
 <p>Le processus de mise à niveau d&#8217;Astra Control Center vous guide à travers les étapes de haut niveau suivantes :</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>the Astra Control Center bundle</p>
+<p><a href="#téléchargez-le-pack-astra-control-center">Téléchargez le pack Astra Control Center</a></p>
 </li>
 <li>
-<p>the bundle and change directory</p>
+<p><a href="#déballez-le-bundle-et-modifiez-le-répertoire">Déballez le bundle et modifiez le répertoire</a></p>
 </li>
 <li>
-<p>the images to your local registry</p>
+<p><a href="#ajoutez-les-images-à-votre-registre-local">Ajoutez les images à votre registre local</a></p>
 </li>
 <li>
-<p>the updated Astra Control Center operator</p>
+<p><a href="#poser-le-conducteur-du-centre-de-commande-astra-mis-à-jour">Poser le conducteur du centre de commande Astra mis à jour</a></p>
 </li>
 <li>
-<p>Astra Control Center</p>
+<p><a href="#mettez-à-niveau-astra-control-center">Mettez à niveau Astra Control Center</a></p>
 </li>
 <li>
-<p>third-party services (Optional)</p>
+<p><a href="#mise-à-niveau-de-services-tiers-facultatif">Mise à niveau de services tiers (facultatif)</a></p>
 </li>
 <li>
-<p>system status</p>
+<p><a href="Vérifiez l&.html#8217;état du système">Vérifiez l&.html</a></p>
 </li>
 <li>
-<p>up ingress for load balancing</p>
+<p><a href="Configurer l&.html#8217;entrée pour l&#8217;équilibrage de charge">Configurer l&.html</a></p>
 </li>
 </ul>
 </div>
@@ -1688,10 +1689,10 @@ done</code></pre>
 </div>
 </li>
 <li>
-<p>Changer <code>[your_registry_path]</code> pour le <code>kube-rbac-proxy</code> image dans le chemin du registre où vous avez poussé les images dans un ,étape précédente.</p>
+<p>Changer <code>[your_registry_path]</code> pour le <code>kube-rbac-proxy</code> image dans le chemin du registre où vous avez poussé les images dans un <a href="#substep_image_local_registry_push">étape précédente</a>.</p>
 </li>
 <li>
-<p>Changer <code>[your_registry_path]</code> pour le <code>acc-operator-controller-manager</code> image dans le chemin du registre où vous avez poussé les images dans un ,étape précédente.</p>
+<p>Changer <code>[your_registry_path]</code> pour le <code>acc-operator-controller-manager</code> image dans le chemin du registre où vous avez poussé les images dans un <a href="#substep_image_local_registry_push">étape précédente</a>.</p>
 </li>
 <li>
 <p>Ajoutez les valeurs suivantes à la <code>env</code> section :</p>
@@ -1809,7 +1810,7 @@ deployment.apps/acc-operator-controller-manager configured</pre>
 <img src="/us-en/astra-control-center-2208/images/note.svg" alt="Note">
 </td>
 <td class="content">
-Votre chemin de registre doit correspondre au chemin du registre où vous avez poussé les images dans un ,étape précédente.
+Votre chemin de registre doit correspondre au chemin du registre où vous avez poussé les images dans un <a href="#substep_image_local_registry_push">étape précédente</a>.
 </td>
 </tr>
 </table>
@@ -2021,7 +2022,7 @@ Pour plus de détails sur le type de service « LoadBalancer » et l&#8217;entr�
 </ul>
 </div>
 <div class="ulist">
-<div class="title">Ce dont vous avez besoin, 8217;ll</div>
+<div class="title">Ce dont vous avez besoin</div>
 <ul>
 <li>
 <p>Dans la spécification CR,</p>

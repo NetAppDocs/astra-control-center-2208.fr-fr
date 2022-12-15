@@ -1402,7 +1402,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-22 16:12:17 +0000">11/22/2022</time>
+    <time datetime="2022-12-14 18:33:02 +0000">12/14/2022</time>
     
   
 
@@ -1421,16 +1421,16 @@
 <div class="title">Tâches</div>
 <ul>
 <li>
-<p>a license for Astra Control Center</p>
+<p><a href="#ajoutez-une-licence-pour-astra-control-center">Ajoutez une licence pour Astra Control Center</a></p>
 </li>
 <li>
-<p>cluster</p>
+<p><a href="#ajouter-un-cluster">Ajouter un cluster</a></p>
 </li>
 <li>
-<p>a storage backend</p>
+<p><a href="Ajout d&.html#8217;un système back-end">Ajout d&.html</a></p>
 </li>
 <li>
-<p>a bucket</p>
+<p><a href="#ajouter-un-godet">Ajouter un godet</a></p>
 </li>
 </ul>
 </div>
@@ -1476,6 +1476,7 @@ Si votre installation dépasse le nombre de processeurs sous licence, Astra Cont
 </table>
 </div>
 <div class="paragraph">
+<div class="title">Ce dont vous avez besoin</div>
 <p>Lorsque vous avez téléchargé Astra Control Center à partir du <a href="https://mysupport.netapp.com/site/products/all/details/astra-control-center/downloads-tab" target="_blank" rel="noopener">"Site de support NetApp"</a>, Vous avez également téléchargé le fichier de licence NetApp (NLF). Assurez-vous d&#8217;avoir accès à ce fichier de licence.</p>
 </div>
 <div class="olist arabic">
@@ -1549,7 +1550,7 @@ Nous vous recommandons de gérer le cluster qu&#8217;Astra Control Center déplo
 <p>Utilisez l&#8217;API de contrôle Astra <code>PUT /managedClusters</code> et attribuez une classe de stockage par défaut différente à l' <code>DefaultStorageClass</code> paramètre.</p>
 </li>
 <li>
-<p>Utilisez l&#8217;interface utilisateur Web Astra Control pour attribuer une classe de stockage par défaut différente. Voir  the default storage class.</p>
+<p>Utilisez l&#8217;interface utilisateur Web Astra Control pour attribuer une classe de stockage par défaut différente. Voir <a href="#modifiez-la-classe-de-stockage-par-défaut">Modifiez la classe de stockage par défaut</a>.</p>
 </li>
 </ul>
 </div>
@@ -1558,7 +1559,7 @@ Nous vous recommandons de gérer le cluster qu&#8217;Astra Control Center déplo
 </table>
 </div>
 <div class="ulist">
-<div class="title">Ce dont vous avez besoin, 8217;ll</div>
+<div class="title">Ce dont vous avez besoin</div>
 <ul>
 <li>
 <p>Avant d&#8217;ajouter un cluster, vérifiez et effectuez les opérations nécessaires <a href="add-cluster-reqs.html" target="_blank" rel="noopener">"tâches préalables"</a>.</p>
@@ -1631,6 +1632,7 @@ Nous vous recommandons de sélectionner une classe de stockage Trident avec le s
 </ol>
 </div>
 <div class="paragraph">
+<div class="title">Résultat</div>
 <p>Le cluster passe à l&#8217;état <strong>découverte</strong>, puis à <strong>en cours d&#8217;exécution</strong>. Vous avez ajouté un cluster Kubernetes et gérez-le dans Astra Control Center.</p>
 </div>
 <div class="admonitionblock important">
@@ -1657,7 +1659,7 @@ Une fois que vous avez ajouté un cluster à gérer dans Astra Control Center, l
 <p>La gestion des clusters de stockage d&#8217;Astra Control en tant que backend de stockage vous permet d&#8217;obtenir des liens entre les volumes persistants (PVS) et le back-end de stockage, ainsi que des metrics de stockage supplémentaires.</p>
 </div>
 <div class="ulist">
-<div class="title">Ce que vous et#8217;ll avez besoin pour les déploiements existants de magasins de données Astra</div>
+<div class="title">Il vous faudra pour déployer un data Store Astra</div>
 <ul>
 <li>
 <p>Vous avez ajouté votre cluster d&#8217;applications Kubernetes et le cluster de calcul sous-jacent.</p>
@@ -1677,7 +1679,7 @@ Lorsque vous ajoutez votre cluster d&#8217;applications Kubernetes pour Astra Da
 </ul>
 </div>
 <div class="ulist">
-<div class="title">Ce que vous et#8217;ll avez besoin de nouveaux déploiements de magasins de données Astra</div>
+<div class="title">Il vous faudra de nouveaux déploiements de data Store Astra</div>
 <ul>
 <li>
 <p>Vous avez <a href="../use/manage-packages-acc.html">"a chargé la version du pack d&#8217;installation que vous envisagez de déployer"</a> À un endroit accessible à Astra Control.</p>
@@ -1686,7 +1688,7 @@ Lorsque vous ajoutez votre cluster d&#8217;applications Kubernetes pour Astra Da
 <p>Vous avez ajouté le cluster Kubernetes que vous souhaitez utiliser pour le déploiement.</p>
 </li>
 <li>
-<p>Vous avez téléchargé le  a license for Astra Control Center,Licence Astra Data Store Pour votre déploiement vers un emplacement accessible à Astra Control.</p>
+<p>Vous avez téléchargé le <a href="#ajoutez-une-licence-pour-astra-control-center">Licence Astra Data Store</a> Pour votre déploiement vers un emplacement accessible à Astra Control.</p>
 </li>
 </ul>
 </div>
@@ -1694,10 +1696,10 @@ Lorsque vous ajoutez votre cluster d&#8217;applications Kubernetes pour Astra Da
 <div class="title">Options</div>
 <ul>
 <li>
-<p>storage resources</p>
+<p><a href="#déploiement-des-ressources-de-stockage">Déploiement des ressources de stockage</a></p>
 </li>
 <li>
-<p>an existing storage backend</p>
+<p><a href="#utiliser-un-système-back-end-existant">Utiliser un système back-end existant</a></p>
 </li>
 </ul>
 </div>
@@ -1868,6 +1870,7 @@ Créez au moins trois étiquettes uniques pour la clé pour chaque nœud. Par ex
 </ol>
 </div>
 <div class="paragraph">
+<div class="title">Résultat</div>
 <p>Après une installation réussie, le système back-end apparaît dans <code>available</code> état dans la liste des systèmes back-end avec des informations de performance actives.</p>
 </div>
 <div class="admonitionblock note">
@@ -1974,6 +1977,7 @@ L&#8217;utilisateur dont vous saisissez ici les informations d&#8217;identificat
 </ol>
 </div>
 <div class="paragraph">
+<div class="title">Résultat</div>
 <p>Le back-end apparaît dans <code>available</code> état dans la liste avec des informations récapitulatives.</p>
 </div>
 <div class="admonitionblock note">
@@ -2111,7 +2115,7 @@ Cette option n&#8217;apparaît pas pour le premier compartiment que vous créez.
 </div>
 </li>
 <li>
-<p>Continuez en ajoutant  S3 access credentials,informations d&#8217;identification.</p>
+<p>Continuez en ajoutant <a href="Ajoutez des identifiants d&.html#8217;accès S3">informations d&#8217;identification</a>.</p>
 </li>
 </ol>
 </div>
