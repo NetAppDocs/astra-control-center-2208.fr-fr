@@ -70,7 +70,6 @@ NOTE: De telles exigences supposent que Astra Control Center est la seule applic
 * *Configuration de l'Astra Trident / ONTAP* : le Centre de contrôle Astra requiert la création et la définition d'une classe de stockage comme classe de stockage par défaut. Le centre de contrôle Astra prend en charge les pilotes ONTAP suivants fournis par Astra Trident :
 +
 ** ontap-nas
-** ontap-nas-flexgroup
 ** ontap-san
 ** ontap-san-économie
 
